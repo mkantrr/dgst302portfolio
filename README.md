@@ -12,3 +12,5 @@ The files contained in the `sonnetgenerator` folder produce a 14 line sonnet, wi
 
 # Glitched at The Beach
 The gallery of pixelsorted images and FFglitched videos can be found [here](https://imgur.com/a/jxCPYYN). The theme for this gallery is, quite obviously once you stare at it, the beach. I think the images turned out pretty well, but the FFglitched videos turned out very well, I love the effect the beach has on the average motion vector method. Enjoy!
+
+## My Revision Process
