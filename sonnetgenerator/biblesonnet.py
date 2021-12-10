@@ -182,20 +182,6 @@ for w,pos in tagged_words:
     if (w in pronouncing.rhymes(line2word5)):
       line2_rhymes.append(w)
 
-line5_rhymes = []
-for w,pos in tagged_words:
-  if (pos == 'VB' or pos == 'VBD' or pos == 'VBG' or pos == 'VBN' or pos == 'VBP' or pos == 'VBZ' or pos == 'PRP' 
-      or pos == 'PRP$' or pos == 'WP' or pos == 'NN' or pos == 'RB' or pos == 'RBR' or pos == 'RBS'):
-    if (w in pronouncing.rhymes(line5word5)):
-      line5_rhymes.append(w)
-
-line6_rhymes = []
-for w,pos in tagged_words:
-  if (pos == 'VB' or pos == 'VBD' or pos == 'VBG' or pos == 'VBN' or pos == 'VBP' or pos == 'VBZ' or pos == 'PRP' 
-      or pos == 'PRP$' or pos == 'WP' or pos == 'NN' or pos == 'RB' or pos == 'RBR' or pos == 'RBS'):
-    if (w in pronouncing.rhymes(line6word5)):
-      line6_rhymes.append(w)
-
 
 line9_rhymes = []
 for w,pos in tagged_words:
@@ -235,17 +221,23 @@ else:
   poemline4 = line4word1.capitalize() + " " + line4word2 + " " + line4word3 + " " + line4word4 + " " + line4word5
 print(poemline4)
 
-poemline5 =  line5word1.capitalize() + " " + line5word2 + " " + line5word3 + " " + line5word4 + " " + line5word5
+if (len(line1_rhymes) > 0):
+  poemline5 =  line5word1.capitalize() + " " + line5word2 + " " + line5word3 + " " + line5word4 + " " + random.choice(line1_rhymes)
+else:
+  poemline5 =  line5word1.capitalize() + " " + line5word2 + " " + line5word3 + " " + line5word4 + " " + line5word5
 print(poemline5)
-poemline6 = line6word1.capitalize() + " " + line6word2 + " " + line6word3 + " " + line6word4 + " " + line6word5
+if (len(line2_rhymes) > 0):
+  poemline6 = line6word1.capitalize() + " " + line6word2 + " " + line6word3 + " " + line6word4 + " " + random.choice(line2_rhymes)
+else:
+  poemline6 = line6word1.capitalize() + " " + line6word2 + " " + line6word3 + " " + line6word4 + " " + line6word5
 print(poemline6)
-if (len(line6_rhymes) > 0):
-  poemline7 = line7word1.capitalize() + " " + line7word2 + " " + line7word3 + " " + line7word4 + " " + random.choice(line6_rhymes)
+if (len(line2_rhymes) > 0):
+  poemline7 = line7word1.capitalize() + " " + line7word2 + " " + line7word3 + " " + line7word4 + " " + random.choice(line2_rhymes)
 else:
   poemline7 = line7word1.capitalize() + " " + line7word2 + " " + line7word3 + " " + line7word4 + " " + line7word5
 print(poemline7)
-if (len(line5_rhymes) > 0):
-  poemline8 = line8word1.capitalize() + " " + line8word2 + " " + line8word3 + " " + line8word4 + " " + random.choice(line5_rhymes) + "."
+if (len(line1_rhymes) > 0):
+  poemline8 = line8word1.capitalize() + " " + line8word2 + " " + line8word3 + " " + line8word4 + " " + random.choice(line1_rhymes) + "."
 else:
   poemline8 = line8word1.capitalize() + " " + line8word2 + " " + line8word3 + " " + line8word4 + " " + line8word5 + "."
 print(poemline8)
